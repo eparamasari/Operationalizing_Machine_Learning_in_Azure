@@ -9,7 +9,7 @@ In this project, an AutoML run was performed on a bank marketing dataset, to pre
 ## Architectural Diagram
 
 Here is an architectural diagram of the project:
-![Architectural Diagram](../img/architectural-diagram.jpg)
+![Architectural Diagram](img/architectural-diagram.jpg "Architectural Diagram")
 
 ## Key Steps
 
@@ -18,21 +18,27 @@ Here is an architectural diagram of the project:
 
 &emsp; &emsp; ![Bank Marketing Data](img/01-registered-bank-marketing-dataset.jpg "Bank Marketing Data")
 
+
 2. Run AutoML with auto featurization
+
    In this step, an Automated ML run was performed as a classification task with auto featurization.
    The best model was found to be Voting Ensemble, which is a very robust model as it actually takes into account the different 'votes' about the label that all the different models predict from the dataset.
 
 &emsp; &emsp; ![AutoML Run Completed](img/02-automl-run-completed.jpg "AutoML Run Completed")
 
+
 3. Deploy the best model
+
    In this step, the best model from the AutoML run, Voting Ensemble, was deployed.
 
 &emsp; &emsp; ![Best Model Deployed](img/03-best-model-deployed.jpg "Best Model Deployed")
 
 &emsp; &emsp; ![Deployed Model](img/03-best-model-deployed-healthy.jpg "Deployed Model")
 
+
 4. Enable logging
-In this step, logging was enabled with a Python script and the Application Insights page could be used to monitor the app.
+
+   In this step, logging was enabled with a Python script and the Application Insights page could be used to monitor the app.
 
 &emsp; &emsp; ![Logging Results](img/04-logging-results.jpg "Logging Results")
 
@@ -40,7 +46,9 @@ In this step, logging was enabled with a Python script and the Application Insig
 
 &emsp; &emsp; ![Logging Results and Application Insights](img/04-logging-results-3.jpg "Logging Results and Application Insights")
 
+
 5. Check swagger documentation
+
    In this step, swagger ui was used to see the input required for an API request in order to obtain predictions from the deployed model. Two modes of API requests were seen, i.e. GET and POST.
 
 &emsp; &emsp; ![Swagger UI](img/05-swagger-ui.jpg "Swagger UI")
@@ -49,15 +57,19 @@ In this step, logging was enabled with a Python script and the Application Insig
 
 &emsp; &emsp; ![Swagger: POST](img/05-swagger-post.jpg "Swagger: POST")
 
+
 6. Consume model endpoint
+
    After finding out the json structure of the input, in this step a Python script was run to get the prediction from the endpoint by sending the new data in the required input structure.
 
 &emsp; &emsp; ![Consume Endpoint](img/06-consume-endpoint.jpg "Consume Endpoint")
 
+
 7. Create, publish, and consume a pipeline
+
    After the model was deployed, a pipeline was created and publish to ease duplicating the project flow. Another run was scheduled and eventually re-run.
 
-&emsp; &emsp; ![Published Pipeline](img/07-published-pipeline-rest-endpoint-active.jpg "Published Pipeline)
+&emsp; &emsp; ![Published Pipeline](img/07-published-pipeline-rest-endpoint-active.jpg "Published Pipeline")
 
 &emsp; &emsp; ![Active Endpoint](img/07-published-endpoint-active.jpg "Active Endpoint")
 
@@ -68,11 +80,11 @@ In this step, logging was enabled with a Python script and the Application Insig
 ## Screen Recording
 
 Below is a link to a screen recording of the project in action.
+
 https://youtu.be/53lSjGeCU0c
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/53lSjGeCU0c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### How to Improve
+## How to Improve
 
 Accuracy can be used as the primary metric in the AutoML run to compare the results with the latest run  which used AUC Weighted.
 Data cleaning could be performed prior to running AutoML to increase accuracy.
