@@ -69,9 +69,13 @@ Here is an architectural diagram of the project:
 
    After the model was deployed, a pipeline was created and publish to ease duplicating the project flow. Another run was scheduled and eventually re-run.
 
+&emsp; &emsp; ![Run Completed](img/07-run-completed.jpg "Run Completed")
+
 &emsp; &emsp; ![Published Pipeline](img/07-published-pipeline-rest-endpoint-active.jpg "Published Pipeline")
 
 &emsp; &emsp; ![Active Endpoint](img/07-published-endpoint-active.jpg "Active Endpoint")
+
+&emsp; &emsp; ![Dataset and AutoML Module](img/07-bank-marketing-dataset-and-automl-module-completed.jpg "Dataset and AutoML Module")
 
 &emsp; &emsp; ![Scheduled Pipeline Run](img/07-notebook-run.jpg "Scheduled Pipeline Run")
 
