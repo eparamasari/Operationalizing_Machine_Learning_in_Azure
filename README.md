@@ -27,7 +27,8 @@ Here is an architectural diagram of the project:
 
 ### 2. Run AutoML with auto featurization
 
-   In this step, an Automated ML run was performed as a classification task with auto featurization.
+   In this step, an Automated ML run was performed as a classification task with auto featurization and AUC Weighted as the primary metric to be optimized
+
    The best model was found to be Voting Ensemble, which is a very robust model as it actually takes into account the different 'votes' about the label that all the different models predict from the dataset.
 
 &emsp; &emsp; ![AutoML Run Completed](img/02-automl-run-completed.jpg "AutoML Run Completed")
