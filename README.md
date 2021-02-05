@@ -1,19 +1,25 @@
-# Operationalizing Machine Learning with Microsoft Azure ML
+# Operationalizing Machine Learning with Microsoft Azure Machine Learning
 
 This is the second project of the Machine Learning Engineer Nanodegree with Microsoft Azure from Udacity.
 
 ## Overview
 
-In this project, an AutoML run was performed on a bank marketing dataset, to predict whether contacted customers would subscribe to the bank product offered. The best model found was deployed and consumed. A pipeline was created and published in the same experiment.
+In this project, an AutoML run was performed on a bank marketing dataset from the Azure ML Studio, which aimed to predict whether contacted customers would subscribe to the bank product offered. 
+
+The best model found was deployed from the Azure ML Studio and consumed by using its REST API endpoint using key as authentication. 
+
+A pipeline was then created and published in the same experiment by using the Azure ML Python SDK. The pipeline will make it easier to share the workflow and rerun the experiment in the future.
 
 ## Architectural Diagram
 
 Here is an architectural diagram of the project:
+
 ![Architectural Diagram](img/architectural-diagram.jpg "Architectural Diagram")
 
 ## Key Steps
 
 ### 1. Upload bank marketing dataset
+
    In this step, the bank marketing dataset was uploaded.
 
 &emsp; &emsp; ![Bank Marketing Data](img/01-registered-bank-marketing-dataset.jpg "Bank Marketing Data")
@@ -29,7 +35,7 @@ Here is an architectural diagram of the project:
 
 ### 3. Deploy the best model
 
-   In this step, the best model from the AutoML run, Voting Ensemble, was deployed.
+   In this step, the best model from the AutoML run, Voting Ensemble, was deployed using Azure Container Instance.
 
 &emsp; &emsp; ![Best Model Deployed](img/03-best-model-deployed.jpg "Best Model Deployed")
 
@@ -69,17 +75,24 @@ Here is an architectural diagram of the project:
 
    After the model was deployed, a pipeline was created and publish to ease duplicating the project flow. Another run was scheduled and eventually re-run.
 
+Completed pipeline run:
+
 &emsp; &emsp; ![Run Completed](img/07-run-completed.jpg "Run Completed")
 
 &emsp; &emsp; ![Published Pipeline](img/07-published-pipeline-rest-endpoint-active.jpg "Published Pipeline")
 
 &emsp; &emsp; ![Active Endpoint](img/07-published-endpoint-active.jpg "Active Endpoint")
 
+The Bank marketing dataset with the AutoML module:
+
 &emsp; &emsp; ![Dataset and AutoML Module](img/07-bank-marketing-dataset-and-automl-module-completed.jpg "Dataset and AutoML Module")
 
-&emsp; &emsp; ![Scheduled Pipeline Run](img/07-notebook-run.jpg "Scheduled Pipeline Run")
+Published pipeline overview:
+
+&emsp; &emsp; ![Published Pipeline Overview](img/07-published-pipeline-overview.jpg "Published Pipeline Overview")
 
 &emsp; &emsp; ![Pipeline Running](img/07-scheduled-pipeline-run.jpg "Pipeline Running")
+
 
 ## Screen Recording
 
@@ -93,5 +106,7 @@ https://youtu.be/53lSjGeCU0c
 * Accuracy can be used as the primary metric in the AutoML run to compare the results with the latest run  which used AUC Weighted.
 
 * Data cleaning could be performed prior to running AutoML to increase accuracy.
+
+* Deep Learning capability in AutoML could be used and the results then be compared to that without Deep Learning.
 
 * A benchmark could be added to similar projects to serve as a monitoring baseline.
